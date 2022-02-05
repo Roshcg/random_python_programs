@@ -1,0 +1,7 @@
+ap job -i 298208822 --logscan -f
+
+
+
+
+
+abug -l  'MirroringToGreTunnelSpecialPktTests.{1,150}EbraBridgeTestLib.{1,400}runningTestIs.{1,400}SpeedChange.{1,30}prepareSpeedChangeTamper.{1,200}randomSpeedChange.{1,150}changeRates.{1,100}RdamDut.{1,30}multiIntfAndPartnerSpeedDuplexIs.{1,200}RdamIntfManager.{1,250}waitForSpeedChangesToComplete.{1,10}raise SpeedChangeTimeoutError' 'SpeedChangeTimeoutError: Timeout waiting for expected interface speed\/status' 'Interface\(s\) WITHOUT expected speed\/status.{1,10}Ethernet4\/1.{1,5}current: notconnect 50G full.{1,5}expected: connected 50G-2 full.{1,40}Ethernet4\/5.{1,5}current: notconnect 50G full.{1,5}expected: connected 50G-2 full' 'Link Debug Info for Ethernet4\/1.{1,15}show interface Ethernet4\/1.{1,5}Ethernet4\/1 is down, line protocol is down' 'show interface Ethernet4\/1 mac detail.{1,200}PHY State\s+linkDown.{1,100}Interface State\s+linkDown.{1,150}MAC Rx Remote Fault\s+False.{1,50}' 'Link Debug Info for Ethernet4\/5.{1,15}show interface Ethernet4\/5.{1,5}Ethernet4\/5 is down, line protocol is down' 'show interface Ethernet4\/5 mac detail.{1,200}PHY State\s+linkDown.{1,100}Interface State\s+linkDown.{1,150}MAC Rx Remote Fault\s+False.{1,50}' -s 'MirroringToGreTunnelSpecialPktTests.py failed with SpeedChangeTimeoutError: Timeout waiting for expected interface speed\/status' -p PhyTest -b eos-trunk-triage -t MirroringToGreTunnelSpecialPktTests.py
